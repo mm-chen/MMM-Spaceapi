@@ -13,7 +13,7 @@ Module.register("MMM-Spaceapi",{
 
 	getTemplateData: function () {
 		return this.config;
-	}
+	},
 
 
 	start: function (){
