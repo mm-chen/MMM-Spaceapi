@@ -1,5 +1,30 @@
 Module.register("mmm-spaceapi",{
+
+
 	defaults: {
+		text: "Hello World!"
+	},
+
+/*	getTemplate: function () {
+		return "helloworld.njk";
+	},
+*/
+	getTemplateData: function () {
+		return this.config;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+/*	defaults: {
                 name: "MMM-Spaceapi",
 		updatesEvery: 120,
 		text:"halloWorld"
@@ -15,4 +40,5 @@ Module.register("mmm-spaceapi",{
 	start: function () {},
 	notificationReceived: function() {},
 	socketNotificationReceived: function() {},
+*/
 });
