@@ -1,43 +1,40 @@
-Module.register("mmm-spaceapi",{
+Module.register("MMM-Spaceapi",{
 
 
 	defaults: {
-		text: "Hello World!"
+		name: "MMM-Spaceapi",
+		text: "Hello World!",
+		updatesEvery: 120
 	},
 
-/*	getTemplate: function () {
-		return "helloworld.njk";
+	getTemplate: function () {
+		return "spaceapi.njk";
 	},
-*/
+
 	getTemplateData: function () {
 		return this.config;
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-/*	defaults: {
-                name: "MMM-Spaceapi",
-		updatesEvery: 120,
-		text:"halloWorld"
+	start: function (){
+		this.count = 0
+		var timer = setInterval(()=>{
+			this.updateDom()
+			this.count++
+		}, 1000)
 	},
 
-	// Override dom generator.
 	getDom: function() {
-		var wrapper = document.createElement("div");
-		wrapper.innerHTML = this.config.text;
-		return wrapper;
+		var element = document.createElement("div")
+		element.className = "myContent"
+		element.innerHTML = "Hello, World! " + this.config.foo
+		var subElement = document.createElement("p")
+		subElement.innerHTML = "Count:" + this.count
+		subElement.id = "COUNT"
+		element.appendChild(subElement)
+		return element
 	},
 
-	start: function () {},
 	notificationReceived: function() {},
 	socketNotificationReceived: function() {},
 */
