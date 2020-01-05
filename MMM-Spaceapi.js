@@ -37,5 +37,5 @@ Module.register("MMM-Spaceapi",{
 
 	notificationReceived: function() {},
 	socketNotificationReceived: function() {},
-*/
+
 });
